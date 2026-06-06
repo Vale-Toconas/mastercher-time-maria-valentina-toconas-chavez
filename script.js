@@ -77,7 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 0.8rem; margin-top: 1.2rem;">
                     <div class="dynamic-box" style="background: var(--white); border: 3.5px solid var(--dark-neutral); border-radius: 20px; padding: 0.6rem 1.5rem; box-shadow: 0px 5px 0px var(--dark-neutral);">
                         <p style="font-size: 1.2rem; font-weight: 700; color: var(--dark-neutral); margin: 0; line-height: 1.4;">
-                            👨‍🍳 Chef Aspirante: <span style="color: var(--pink-masterchef); font-family: var(--font-bubble-title); font-size: 1.4rem;">MARIA VALENTINA TOCONAS CHAVEZ</span>
+                            👨‍🍳 Chef Aspirante: <span style="color: var(--pink-masterchef); font-family: var(--font-bubble-title); font-size: 1.4rem;">${txtNombre}</span>
                         </p>
                     </div>
                     <div class="dynamic-box" style="background: var(--white); border: 3.5px solid var(--dark-neutral); border-radius: 20px; padding: 0.6rem 1.5rem; box-shadow: 0px 5px 0px var(--dark-neutral);">
