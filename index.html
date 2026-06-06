@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MASTERCHEF TIME - Simulador Bubble Cute</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <div class="emoji-background-static">
+        🍔 🍓 🍳 🥑 🍩 🍕 🥦 🍗 🍿 🍦 🥞 🧅 🍅 🍇 🥐 🍉 🍟 🧀 🌮 🍙 🍪 🎂 🧁 🍯 🧋 🍒 🌶️ 🥕 🍋 🍏
+        🍔 🍓 🍳 🥑 🍩 🍕 🥦 🍗 🍿 🍦 🥞 🧅 🍅 🍇 🥐 🍉 🍟 🧀 🌮 🍙 🍪 🎂 🧁 🍯 🧋 🍒 🌶️ 🥕 🍋 🍏
+        🍔 🍓 🍳 🥑 🍩 🍕 🥦 🍗 🍿 🍦 🥞 🧅 🍅 🍇 🥐 🍉 🍟 🧀 🌮 🍙 🍪 🎂 🧁 🍯 🧋 🍒 🌶️ 🥕 🍋 🍏
+        🍔 🍓 🍳 🥑 🍩 🍕 🥦 🍗 🍿 🍦 🥞 🧅 🍅 🍇 🥐 🍉 🍟 🧀 🌮 0🍙 🍪 🎂 🧁 🍯 🧋 🍒 🌶️ 🥕 🍋 🍏
+        🍔 🍓 🍳 🥑 🍩 🍕 🥦 🍗 🍿 🍦 🥞 🧅 🍅 🍇 🥐 🍉 🍟 🧀 🌮 🍙 🍪 🎂 🧁 🍯 🧋 🍒 🌶️ 🥕 🍋 🍏
+        🍔 🍓 🍳 🥑 🍩 🍕 🥦 🍗 🍿 🍦 🥞 🧅 🍅 🍇 🥐 🍉 🍟 🧀 🌮 🍙 🍪 🎂 🧁 🍯 🧋 🍒 🌶️ 🥕 🍋 🍏
+        🍔 🍓 🍳 🥑 🍩 🍕 🥦 🍗 🍿 🍦 🥞 🧅 🍅 🍇 🥐 🍉 🍟 🧀 🌮 🍙 🍪 🎂 🧁 🍯 🧋 🍒 🌶️ 🥕 🍋 🍏
+        🍔 🍓 🍳 🥑 🍩 🍕 🥦 🍗 🍿 🍦 🥞 🧅 🍅 🍇 🥐 🍉 🍟 🧀 🌮 0🍙 🍪 🎂 🧁 🍯 🧋 🍒 🌶️ 🥕 🍋 🍏
+        🍔 🍓 🍳 🥑 🍩 🍕 🥦 🍗 🍿 🍦 🥞 🧅 🍅 🍇 🥐 🍉 🍟 🧀 🌮 🍙 🍪 🎂 🧁 🍯 🧋 🍒 🌶️ 🥕 🍋 🍏
+        🍔 🍓 🍳 🥑 🍩 🍕 🥦 🍗 🍿 🍦 🥞 🧅 🍅 🍇 🥐 🍉 🍟 🧀 🌮 🍙 🍪 🎂 🧁 🍯 🧋 🍒 🌶️ 🥕 🍋 🍏
+        🍔 🍓 🍳 🥑 🍩 🍕 🥦 🍗 🍿 🍦 🥞 🧅 🍅 🍇 🥐 🍉 🍟 🧀 🌮 🍙 🍪 🎂 🧁 🍯 🧋 🍒 🌶️ 🥕 🍋 🍏
+        🍔 🍓 🍳 🥑 🍩 🍕 🥦 🍗 🍿 🍦 🥞 🧅 🍅 🍇 🥐 🍉 🍟 🧀 🌮 0🍙 🍪 🎂 🧁 🍯 🧋 🍒 🌶️ 🥕 🍋 🍏
+    </div>
+
+    <div id="pantalla-registro" class="auth-overlay">
+        <div class="auth-card dynamic-box mega-form">
+            <div class="masterchef-logo">👨‍🍳 MASTERCHEF TIME 🔥</div>
+            <br>
+            <h2 class="titulo-formulario">Registro de Chef</h2>
+            <p class="sub-formulario">Completa tus Datos Culinarios Antes de Ingresar a la Cocina.</p>
+            <form id="form-registro">
+                <div class="form-group-huge">
+                    <label for="reg-nombre">✨ Tu Nombre de Chef ✨</label>
+                    <input type="text" id="reg-nombre" placeholder="Ej. Chef Maria Valentina Toconas Chavez" required>
+                </div>
+                <div class="form-group-huge">
+                    <label for="reg-correo">✉️ Correo Electrónico ✉️</label>
+                    <input type="email" id="reg-correo" placeholder="Ej. chef@ejemplo.com" required 
+                           style="width:100%; font-family:var(--font-bubble-body); font-weight:700; font-size:1.4rem; padding:1rem 1.5rem; border:3.5px solid var(--dark-neutral); background-color:var(--white); border-radius:25px;">
+                </div>
+                <div class="form-group-huge">
+                    <label for="reg-edad">🎂 Edad 🎂</label>
+                    <input type="number" id="reg-edad" min="1" max="120" placeholder="Ej. 18" required
+                           style="width:100%; font-family:var(--font-bubble-body); font-weight:700; font-size:1.4rem; padding:1rem 1.5rem; border:3.5px solid var(--dark-neutral); background-color:var(--white); border-radius:25px;">
+                </div>
+                <div class="form-group-huge">
+                    <label for="reg-ciudad">📍 Ciudad de Origen 📌</label>
+                    <input type="text" id="reg-ciudad" placeholder="Ej. La Paz" required>
+                </div>
+                <button type="submit" class="btn btn-primary btn-huge">👨‍🍳🔥 ¡INGRESAR A LA COCINA! 👨‍🍳🔥</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="contenido-principal" class="hidden">
+        <header class="header-container">
+            <div class="header-content">
+                <span class="badge-live">🔴 ¡EN VIVO Y EN DIRECTO! 🔴</span>
+                <br>
+                <br>
+                <h1 class="titulo-gigante">MASTERCHEF TIME</h1>
+                <p class="sub-jogging">🚨 DESAFÍO DEL DIA: INGREDIENTES DE EMERGENCIA 🚨</p>
+                <br>
+                <br>
+                <p class="sub-jogging">⭐ MARIA VALENTINA TOCONAS CHAVEZ ⭐</p>
+                <div id="bienvenida-chef" class="chef-welcome"></div>
+            </div>
+        </header>
+
+        <main class="container">
+            <section id="contexto" class="card dynamic-box">
+                <h2>❓ El Reto de la Caja Misteriosa 🔎</h2>
+                <p>
+                    En estos dias de crisis el <strong>MERCADO BOLIVIANO</strong> ha sufrido algunas variaciones <strong>NEGATIVAS</strong>, muchos ingredientes escenciales, como el <strong>POLLO O EL HUEVO</strong> han llegado a faltar en la mesa de muchas familias bolivianas, por lo que la comida de cada dia se ha vuelto todo un <strong>DESAFIO</strong>, en este simulador web te invitamos a innovar tus recetas culinarias con <strong>LOS INGREDIENTES MENOS PENSADOS.</strong>
+                </p>
+            </section>
+
+            <div class="vertical-layout">
+                
+<article id="escenario-insumos" class="card dynamic-box">
+                    <h3>🛒 Estación de Ingredientes 🛒</h3>
+                    <form id="formulario-crisis" autocomplete="off">
+                        <h4 class="sub-title">🤔 ¿Qué alimentos tienes en casa hoy? 🤔</h4>
+                        <p style="font-size: 1.1rem; margin-bottom: 1.5rem; color: #555770;">Ingresa las cantidades disponibles:</p>
+                        
+                        <!-- NUEVO DISEÑO LADO A LADO: 3 columnas simétricas -->
+                        <div class="inputs-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.2rem;">
+                            <div class="form-group">
+                                <label for="input-atun">Atún en Lata:</label>
+                                <div class="input-with-unit">
+                                    <input type="number" id="input-atun" min="0" placeholder="2">
+                                    <span class="unit">u</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="input-queso">Queso Criollo:</label>
+                                <div class="input-with-unit">
+                                    <input type="number" id="input-queso" min="0" step="0.1" placeholder="0.5">
+                                    <span class="unit">kg</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="input-lechuga">Lechuga Fresca:</label>
+                                <div class="input-with-unit">
+                                    <input type="number" id="input-lechuga" min="0" placeholder="1">
+                                    <span class="unit">u</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="input-zanahoria">Zanahoria:</label>
+                                <div class="input-with-unit">
+                                    <input type="number" id="input-zanahoria" min="0" placeholder="3">
+                                    <span class="unit">u</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="input-pepino">Pepino:</label>
+                                <div class="input-with-unit">
+                                    <input type="number" id="input-pepino" min="0" placeholder="2">
+                                    <span class="unit">u</span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="input-arroz">Arroz / Fideo:</label>
+                                <div class="input-with-unit">
+                                    <input type="number" id="input-arroz" min="0" step="0.1" placeholder="0.5">
+                                    <span class="unit">kg</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="button-group" style="margin-top: 2rem;">
+                            <button type="button" id="btn-calcular" class="btn btn-primary">¡Cocinar YA!</button>
+                            <button type="button" id="btn-limpiar" class="btn btn-secondary">Vaciar Estación</button>
+                        </div>
+                    </form>
+                </article>
+
+                <article id="recetario" class="card dynamic-box hidden">
+                    <h3>🍽️ Menú Sugerido (¡Elige un plato YA!) 🍽️</h3>
+                    <p class="section-desc">Selecciona el plato que deseas presentar al exigente jurado:</p>
+                    <br>
+                    <div id="contenedor-recetas" class="recetas-grid"></div>
+                </article>
+
+                <article id="tarjeta-resultados" class="card dynamic-box output-card hidden">
+                    <h3>📋 Veredicto definitivo del Jurado 📋</h3>
+                    <div id="resultado-financiero" class="resultado-vacio"></div>
+                </article>
+            </div>
+
+            <section id="casos-estudio" class="card dynamic-box">
+                <h3>📚 Casos de Estudio Técnicos 📚</h3>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Caso</th>
+                                <th>Inventario</th>
+                                <th>Resultado Técnico Esperado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="badge-table success-bg">Caso 1</span></td>
+                                <td>Atún: 2u, Queso: 0.5kg, Lechuga: 1u, Zanahoria: 2u, Pepino: 1u, Arroz: 1kg</td>
+                                <td>Despensa equilibrada. Desbloquea platos con bases de arroz frío y ensaladas.</td>
+                            </tr>
+                            <tr>
+                                <td><span class="badge-table danger-bg">Caso 2</span></td>
+                                <td>Atún: 0u, Queso: 0kg, Lechuga: 0u, Zanahoria: 0u, Pepino: 0u, Arroz: 0kg</td>
+                                <td>Déficit por despensa vacía. Alerta en la mesa de control de los jueces por falta de insumos.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            <section id="proposito-conclusion" class="card dynamic-box" style="margin-top: 2rem; background-color: rgba(255, 255, 255, 0.9);">
+                <h3 style="color: var(--pink-masterchef); text-align: center; margin-bottom: 1.5rem;">🎯 Propósito y Conclusión del Desafío 💡</h3>
+                
+                <div style="display: block; margin-bottom: 1.5rem;">
+                    <h4 style="color: var(--dark-neutral); margin-bottom: 0.5rem;">🤔 ¿Qué busca ayudar este simulador? 🤔</h4>
+                    <p style="font-size: 1.1rem; line-height: 1.5; color: #333;">
+                        Este simulador interactivo, ayuda a el o la cocinera a tener mas imaginacion en la <strong>PREPARACION DIARIA DE UN PLATILLO</strong>, con ingredientes <strong>POCO USADOS</strong> en la gastronomía cotidiana, como lo son <strong>LA ZANAHORIA, EL ATUN O INCLUSO EL PEPINO.</strong>
+                    </p>
+                </div>
+
+                <div style="border-top: 2.5px dashed var(--dark-neutral); padding-top: 1.5rem;">
+                    <h4 style="color: var(--dark-neutral); margin-bottom: 0.5rem;">💡 Conclusión Técnica 💡</h4>
+                    <p style="font-size: 1.1rem; line-height: 1.5; color: #333;">
+                        En conclusión, <strong>NO NECESITAS</strong> de ingredientes cotidianos como <strong>EL POLLO O EL HUEVO</strong>, para poder realizar increibles platillos dignos de un <strong>VERDADERO MASTERCHEF.</strong>
+                    </p>
+                </div>
+            </section>
+        </main>
+
+
+    </div>
+    <footer class="card footer-card" style="text-align: center; background-color: #2a2c3b; padding: 1.5rem; margin-top: 2rem; border-radius: 25px 25px 0 0;">
+        <div class="links-geo" style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 1.5rem;">
+            <a href="https://github.com/Vale-Toconas/mastercher-time-maria-valentina-toconas-chavez" target="_blank" class="btn btn-secondary link-repo" style="text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">
+                📂 Repositorio Git
+            </a>
+            <a href="#" target="_blank" class="btn btn-secondary link-page" style="text-decoration: none; display: inline-flex; align-items: center; gap: 0.5rem;">
+                🚀 Sitio Web Publicado
+            </a>
+        </div>
+        
+        <div style="display: block; text-align: center; width: 100%; padding: 0 1rem;">
+            <p style="font-family: var(--font-bubble-body); font-weight: 700; color: #ffffff !important; margin: 0; font-size: 1.1rem; letter-spacing: 0.5px; white-space: nowrap;">
+                <span style="margin-right: 1rem; font-size: 1.2rem;">⭐</span>
+                Maria Valentina Toconas Chavez, La Paz - Bolivia © 2026 Copyright
+                <span style="margin-left: 1rem; font-size: 1.2rem;">🏆</span>
+            </p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

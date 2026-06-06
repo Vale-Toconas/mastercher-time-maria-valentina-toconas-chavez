@@ -1,0 +1,177 @@
+/* [Se asume el resto de tu código CSS intacto] */
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Fredoka:wght@400;700&display=swap');
+
+:root {
+    --bg-celeste: #b5edff;
+    --pink-masterchef: #ff477e;
+    --pink-hover: #ffeef2;
+    --white: #ffffff;
+    --dark-neutral: #2a2c3b;
+    --font-bubble-title: 'Bubblegum Sans', cursive;
+    --font-bubble-body: 'Fredoka', sans-serif;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    background-color: var(--bg-celeste);
+    color: var(--dark-neutral);
+    font-family: var(--font-bubble-body);
+    font-size: 1.35rem;
+    overflow-x: hidden;
+    position: relative;
+}
+
+/* --- FONDO MASIVO DE EMOJIS ESTÁTICOS INYECTADOS --- */
+.emoji-background-static {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100vw !important;
+    height: 100vh !important;
+    z-index: -1;               /* Se mantiene detrás de todo */
+    pointer-events: none;      /* No interfiere con los clics */
+    opacity: 0.35;             /* Visibilidad idónea para fondo */
+    filter: saturate(1.3);    /* Extra de viveza a los colores */
+    font-size: 3.8rem;         /* Tamaño grande y bombacho */
+    line-height: 1.8;
+    letter-spacing: 0.5rem;
+    word-break: break-all;
+    user-select: none;
+    padding: 20px;
+    overflow: hidden;
+}
+
+/* Inyección de la cadena masiva de emojis gastronómicos */
+.emoji-background-static::before {
+    content: "🍳 🍕 🍔 🍟 🍦 🍰 🍩 🍪 🍫 🍣 🌮 🥞 🍉 🍓 🍍 🥑 🥕 👨‍🍳 👩‍🍳 🍿 🍔 🍕 🍩 🍦 🍳 🥞 🌮 🍣 🍉 🍟 🍰 🍪 🍫 🍍 🍓 🍳 🍕 🍔 🍟 🍦 🍰 🍩 🍪 🍫 🍣 🌮 🥞 🍉 🍓 🍍 🥑 🥕 👨‍🍳 👩‍🍳 🍿 🍔 🍕 🍩 🍦 🍳 🥞 🌮 🍣 🍉 🍟 🍰 🍪 🍫 🍍 🍓 🍳 🍕 🍔 🍟 🍦 🍰 🍩 🍪 🍫 🍣 🌮 🥞 🍉 🍓 🍍 🥑 🥕 👨‍🍳 👩‍🍳 🍿 🍔 🍕 🍩 🍦 🍳 🥞 🌮 🍣 🍉 🍟 🍰 🍪 🍫 🍍 🍓";
+}
+
+.titulo-gigante {
+    font-family: var(--font-bubble-title); /* Corregido var(--blue) que no existía por la de los títulos */
+    font-size: 7rem;
+    line-height: 0.85;
+    text-transform: uppercase;
+    color: #ffe600;           /* ¡DORADO ORO GOURMET! 🌟 */
+    text-shadow: 6px 6px 0px var(--dark-neutral);
+    letter-spacing: 2px;
+    margin-bottom: 0.8rem;
+}
+
+@media (max-width: 768px) { .titulo-gigante { font-size: 4.2rem; } }
+
+.sub-jogging {
+    font-family: var(--font-bubble-body); font-weight: 700; font-size: 1.4rem;
+    color: var(--white); background: var(--dark-neutral); display: inline-block;
+    padding: 0.4rem 1.2rem; border-radius: 25px;
+}
+
+.dynamic-box {
+    background: var(--white); border: 4.5px solid var(--dark-neutral);
+    border-radius: 40px; box-shadow: 0px 14px 0px var(--dark-neutral);
+    transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.25s ease, box-shadow 0.25s ease;
+}
+.dynamic-box:hover { transform: translateY(-8px); background-color: var(--pink-hover); box-shadow: 0px 22px 0px var(--dark-neutral); }
+
+/* --- REPARACIÓN FLEX DEL FORMULARIO DE REGISTRO --- */
+/* --- REPARACIÓN FLEX DEL FORMULARIO DE REGISTRO (Fondo 100% sólido) --- */
+.auth-overlay {
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    width: 100vw; 
+    height: 100vh;
+    background: var(--bg-celeste) !important; /* ¡CAMBIADO! Ahora es 100% opaco y oculta el fondo */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    padding: 1rem;
+    overflow-y: auto; /* Permite scroll si la pantalla es muy pequeña */
+}
+
+.mega-form {
+    padding: 2.5rem 2rem;
+    width: 100%;
+    max-width: 580px;
+    text-align: center;
+    z-index: 10000;
+    max-height: 92vh;
+    overflow-y: auto;
+}
+
+/* Clases para interactividad de recetas seleccionadas */
+.receta-item {
+    background: var(--white); border: 3.5px solid var(--dark-neutral);
+    padding: 1.8rem; border-radius: 30px; cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+}
+.receta-item:hover {
+    background-color: #fff0f3;
+    transform: scale(1.02);
+}
+.receta-item.selected {
+    background-color: #ffb3c6 !important;
+    border-color: var(--pink-masterchef) !important;
+    transform: scale(1.04);
+    box-shadow: 0 0 15px rgba(255, 71, 126, 0.4);
+}
+
+/* Estructura restante */
+.titulo-formulario { font-family: var(--font-bubble-title); font-size: 2.5rem; color: var(--dark-neutral); margin-bottom: 0.3rem; }
+.sub-formulario { font-size: 1.1rem; margin-bottom: 1.5rem; color: #555770; }
+.masterchef-logo {
+    font-family: var(--font-bubble-title); background: var(--pink-masterchef); color: var(--white);
+    padding: 0.5rem 1.2rem; font-size: 2rem; border-radius: 25px; display: inline-block;
+    margin-bottom: 0.5rem; border: 4px solid var(--dark-neutral); box-shadow: 0px 5px 0px var(--dark-neutral);
+}
+.vertical-layout { display: flex; flex-direction: column; gap: 3rem; margin-bottom: 3rem; }
+.header-container { text-align: center; padding: 4rem 1rem 2rem 1rem; position: relative; z-index: 5; }
+.container { max-width: 800px; margin: 0 auto; padding: 1.5rem; position: relative; z-index: 10; }
+.card { padding: 3rem 2.5rem; margin-bottom: 2.5rem; }
+h2, h3, h4 { font-family: var(--font-bubble-title); font-size: 2.4rem; margin-bottom: 1rem; letter-spacing: 0.5px; }
+.inputs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 1.5rem; }
+.form-group-huge { margin-bottom: 1.2rem; text-align: left; }
+.form-group-huge label { font-family: var(--font-bubble-title); font-size: 1.5rem; display: block; margin-bottom: 0.3rem; padding-left: 0.5rem; }
+.form-group label { font-weight: 700; font-size: 1.2rem; display: block; margin-bottom: 0.4rem; }
+input[type="number"], input[type="text"] {
+    width: 100%; font-family: var(--font-bubble-body); font-weight: 700; font-size: 1.3rem;
+    padding: 0.8rem 1.2rem; border: 3.5px solid var(--dark-neutral); background-color: var(--white); border-radius: 25px;
+}
+input:focus { outline: none; border-color: var(--pink-masterchef); }
+.input-with-unit { position: relative; display: flex; align-items: center; }
+.unit { position: absolute; right: 1.5rem; font-family: var(--font-bubble-title); font-size: 1.6rem; color: var(--pink-masterchef); }
+.button-group { display: flex; gap: 1.5rem; margin-top: 2.5rem; }
+.btn { font-family: var(--font-bubble-title); font-size: 1.4rem; padding: 0.8rem 1.8rem; border: 3.5px solid var(--dark-neutral); cursor: pointer; border-radius: 25px; transition: transform 0.1s ease; }
+.btn-primary { background: var(--pink-masterchef); color: var(--white); box-shadow: 0px 6px 0px var(--dark-neutral); }
+.btn-secondary { background: #edf1f5; color: var(--dark-neutral); box-shadow: 0px 6px 0px var(--dark-neutral); }
+.btn-huge { width: 100%; font-size: 1.6rem; padding: 1rem; margin-top: 1rem;}
+.alert-box { padding: 1.5rem; border: 3.5px solid var(--dark-neutral); margin-top: 1.5rem; border-radius: 25px; font-weight: bold; }
+.success { background: #b5ff2a; }
+.danger { background: #ff5c5c; color: white; }
+.recetas-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+.table-container { border-radius: 25px; overflow: hidden; border: 3.5px solid var(--dark-neutral); }
+table { width: 100%; border-collapse: collapse; background: white; }
+th, td { padding: 1.1rem; border: 2.5px solid var(--dark-neutral); }
+th { background: var(--dark-neutral); color: white; font-family: var(--font-bubble-title); font-size: 1.5rem; }
+.hidden { display: none !important; }
+.chef-welcome { margin-top: 1.5rem; font-family: var(--font-bubble-title); color: var(--pink-masterchef); font-size: 1.9rem; }
+
+
+/* Forzar a que la estructura web ocupe todo el alto disponible */
+html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #a3e5ff;
+}
+
+/* Asegurar que el contenedor principal se estire cubriendo todo */
+#contenido-principal {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+}
