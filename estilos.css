@@ -234,3 +234,63 @@ html, body {
         width: 100%;
     }
 }
+/* ==========================================================================
+   💥 SUPER REPARACIÓN DE DESBORDE Y SCROLL HORIZONTAL (MÓVILES) 💥
+   ========================================================================== */
+
+/* 1. Forzar al HTML y Body a no salirse NUNCA de los límites del teléfono */
+html, body {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important; /* Corta radicalmente cualquier desborde derecho */
+    margin: 0 !important;
+    padding: 0 !important;
+    box-sizing: border-box;
+}
+
+/* 2. Reparar el contenedor del fondo de emojis para que no rompa el ancho */
+.emoji-background-static {
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    width: 100% !important; /* Cambiado de 100vw a 100% para evitar el bug del viewport en móviles */
+    height: 100% !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* 3. Asegurar que el contenedor principal y las tarjetas se queden adentro */
+#contenido-principal, .container {
+    width: 100% !important;
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    padding: 10px !important; /* Espaciado amigable para que no toque los bordes físicos */
+    box-sizing: border-box !important;
+}
+
+.card, .mega-form {
+    width: 100% !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+}
+
+/* 4. Fulminar CUALQUIER texto fantasma del footer que ande flotando (Como el de la captura) */
+footer, .footer-card, [class*="footer"], [id*="footer"] {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* 5. El título gigante se está comiendo el ancho del celular, hay que achicarlo más */
+@media (max-width: 768px) {
+    .titulo-gigante {
+        font-size: 3rem !important; /* Bajado de 4.2rem a 3rem para celulares */
+        line-height: 1.1 !important;
+        word-wrap: break-word !important;
+    }
+}
